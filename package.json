@@ -2,11 +2,12 @@
   "name": "passgen",
   "version": "1.0.0",
   "description": "A nodejs password generator",
-  "main": "index.js",
+  "main": "src/index.js",
   "preferGlobal": true,
-  "bin": "./index.js",
+  "bin": "./src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "nyc mocha \"test/**/*.test.js\"",
+    "version": "oclif-dev readme && git add README.md"
   },
   "keywords": [
     "Password",
@@ -14,10 +15,20 @@
     "Nodejs"
   ],
   "author": "Uchenna Emeruche",
+  "bugs": "https://github.com/uchennaemeruche/password-gen-cli/issues",
+  "homepage": "https://github.com/uchennaemeruche/password-gen-cli",
+  "repository": "https://github.com/uchennaemeruche/password-gen-cli",
   "license": "MIT",
   "dependencies": {
     "chalk": "^4.1.1",
     "clipboardy": "^2.3.0",
     "commander": "^8.0.0"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "concat-stream": "^2.0.0",
+    "eslint": "^7.30.0",
+    "mocha": "^9.0.2",
+    "nyc": "^15.1.0"
   }
 }
