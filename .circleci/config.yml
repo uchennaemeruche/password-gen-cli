@@ -15,9 +15,6 @@ jobs:
       - run:
           name: install dependencies
           command: npm ci
-      - run:
-          name: Run another install dependencies
-          command: npm install
       - save_cache:
           key: node-deps-v1-{{checksum ".circleci/config.yml"}}-{{checksum "package-lock.json"}}
           paths:
