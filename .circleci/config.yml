@@ -23,9 +23,6 @@ jobs:
           paths:
             - ~/.npm
             - /usr/local/lib/node_modules
-      - run:                                                                    
-          name: Run Tests                                                       
-          command: xvfb-run npm t
       - run:
           name: Run Tests
           command: npm test
